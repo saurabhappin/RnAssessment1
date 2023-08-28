@@ -17,6 +17,7 @@ import {
   useColorScheme,
   View,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 
 import GoogleSVG from './Assets/svgs/google.svg';
@@ -34,10 +35,12 @@ const App = () => {
       source={require('./Assets/BG.png')}
       resizeMode="cover"
       style={styles.image}>
-      <SafeAreaView style={styles.main}>
-        <NavBar />
-        <Mask />
-      </SafeAreaView>
+      <ScrollView>
+        <SafeAreaView style={styles.main}>
+          <NavBar />
+          <Mask />
+        </SafeAreaView>
+      </ScrollView>
     </ImageBackground>
   );
 };
